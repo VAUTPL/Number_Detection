@@ -1,4 +1,5 @@
 Detect Numbers Meter
+====================
 This project involved an investigation in detecting meter numbers using Python and OpenCV API. The code is free to be used and modified by anyone wishing to do so
 System Requirements
 	•	An i3 or better processor. The faster the better, especially at high video resolutions.
