@@ -1,6 +1,8 @@
-# python audio.py output.wav
-# python audio.py Jaded.wav
 
+# python audio.py output.wav
+
+
+# import libraries
 import pyaudio
 import wave
 import time

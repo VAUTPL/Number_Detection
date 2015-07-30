@@ -1,5 +1,6 @@
 # python grabar_audio.py
 
+#import libraries
 import pyaudio
 import wave
 import time

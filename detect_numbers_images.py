@@ -1,4 +1,15 @@
-#USAGE
+#############################################
+# Universidad Tecnica Particular de Loja    #
+#############################################
+# Professor:                                #
+# Rodrigo Barba        lrbarba@utpl.edu.ec  #
+#############################################
+# Students:                                 #
+# Marcelo Bravo        mdbravo4@utpl.edu.ec #
+# Galo Celly           gscelly@utpl.edu.ec  #
+# Nicholas Earley      nearley@utpl.edu.ec  #
+#############################################
+
 # python detect_numbers_images.py --model models/svm.cpickle --image images/f5a.jpg
 
 # import the necessary packages
@@ -163,3 +174,10 @@ for (c, _) in cnts:
             cv2.imshow("image", image)
             # prees a key to continue
             cv2.waitKey(0)
+
+#To use sounds 
+#Audio (Just for OSX)
+#os.system ("say Coincide")
+#
+#Audio (Other Systems)
+#os.system("../sound/si.wav")
