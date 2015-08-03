@@ -19,6 +19,8 @@ import argparse
 import cPickle
 import mahotas
 import cv2
+#import os
+#uncomment for use audio
 import mask as msk
 import numpy as np
 
@@ -244,6 +246,8 @@ for (c, _) in cnts:
         cv2.putText(image, str(digit), (x - 5, y - 5),
             cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2)
         cv2.imshow("image", image)
+        #uncommetn for use audio
+        #os.system ("say Match")
         # prees a key to continue
         cv2.waitKey(0)
 

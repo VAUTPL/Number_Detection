@@ -19,6 +19,8 @@ import argparse
 import cPickle
 import mahotas
 import cv2
+#import os
+#uncomment for use audio
 import mask as msk
 import numpy as np
 
@@ -60,7 +62,7 @@ gray = cv2.cvtColor(subtracted, cv2.COLOR_BGR2GRAY)
 # location you recognize (using a mask)
 mask = np.zeros(gray.shape[:2], dtype = "uint8")
 (cX, cY) = (gray.shape[1] / 2, gray.shape[0] / 2)
-cv2.rectangle(mask, (cX - 200, cY - 270), (cX + 170 , cY - 215), 255, -1)
+cv2.rectangle(mask, (cX - 200, cY - 270), (cX + 170 , cY - 215), 255, -1) # change this line for other image (first mask)
 masked = cv2.bitwise_and(gray, gray, mask = mask)
 cv2.imshow("Mask Applied to Image", masked)
 
@@ -124,7 +126,7 @@ gray = cv2.cvtColor(subtracted, cv2.COLOR_BGR2GRAY)
 # location you recognize (using a mask)
 mask = np.zeros(gray.shape[:2], dtype = "uint8")
 (cX, cY) = (gray.shape[1] /2, gray.shape[0] / 2)
-cv2.rectangle(mask, (cX - 00, cY - -120), (cX + 450 , cY - -175), 255, -1)
+cv2.rectangle(mask, (cX - 00, cY - -120), (cX + 450 , cY - -175), 255, -1) # change this line for other image (second mask)
 masked = cv2.bitwise_and(gray, gray, mask = mask)
 cv2.imshow("Mask Applied to Image22", masked)
 
@@ -172,6 +174,9 @@ for (c, _) in cnts:
             cv2.putText(image, str(digit), (x - 5, y - 5),
                 cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2)
             cv2.imshow("image", image)
+            #uncomment to audio
+            #os.systme("say Match")
+            os.system ("say Coincide")
             # prees a key to continue
             cv2.waitKey(0)
 
@@ -181,3 +186,23 @@ for (c, _) in cnts:
 #
 #Audio (Other Systems)
 #os.system("../sound/si.wav")
+
+
+#other images mask
+#f4.jpg
+#cv2.rectangle(mask, (cX - 134, cY - 145), (cX + 150 , cY - 115), 255, -1) #first mask
+#cv2.rectangle(mask, (cX - 30, cY - -55), (cX + 220 , cY - -100), 255, -1) #second mask
+
+
+#f11.jpg
+#cv2.rectangle(mask, (cX - 300, cY - 450), (cX + 202 , cY - 390), 255, -1) #first mask
+#cv2.rectangle(mask, (cX - 235, cY - 30), (cX + 340 , cY - -30), 255, -1) #second mask
+
+#f14.jpg
+#cv2.rectangle(mask, (cX - 200, cY - 285), (cX + 170 , cY - 225), 255, -1) #first mask
+#cv2.rectangle(mask, (cX - 00, cY - 20), (cX + 450 , cY - -20), 255, -1) #second mask
+
+#v.png
+#cv2.rectangle(mask, (cX - 135, cY - 90), (cX + 102 , cY - 30), 255, -1) #first mask
+#cv2.rectangle(mask, (cX - -20, cY - -165), (cX + 220 , cY - -235), 255, -1) #second mask
+
