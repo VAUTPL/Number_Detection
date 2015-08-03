@@ -35,7 +35,7 @@ Installation on OS X
 --------------------
 Apple uses a prior version of Python that does not support the latest Python libraries. One work around is to install Python with Homebrew:
 
-$ brew install python`
+`$ brew install python`
 
 Replacing Apple's system Python with an unsupported version may break things. Therefore we linked Homebrew's Python into the system path without replacing the system Python:
 
